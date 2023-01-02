@@ -17,6 +17,7 @@ const generateImage = async (req, res) => {
 			n: 1,
 			size: imageSize,
 		});
+
 		const imageUrl = response.data.data[0].url;
 
 		res.status(200).json({
@@ -33,7 +34,7 @@ const generateImage = async (req, res) => {
 
 		res.status(400).json({
 			success: false,
-			error: 'The image could not be generatred',
+			error: 'The image could not be generated',
 		});
 	}
 };

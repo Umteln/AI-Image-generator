@@ -12,11 +12,7 @@
 		/>
 		<link
 			rel="stylesheet"
-			href="css/style.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="css/spinner.css"
+			href="/css/style.css"
 		/>
 
 		<script
@@ -29,7 +25,8 @@
 		<header>
 			<div class="navbar">
 				<div class="logo">
-					<h2>OpenAI Image Genrator</h2>
+					<h2>Create IT</h2>
+					<h4>OpenAI Image Genrator</h4>
 				</div>
 				<div class="nav-links">
 					<ul>
@@ -46,51 +43,66 @@
 		</header>
 
 		<main>
-			<section class="showcase">
-				<form id="image-form">
-					<h1>Describe An Image</h1>
-					<div class="form-control">
-						<input
-							type="text"
-							id="prompt"
-							placeholder="Enter Text"
+			<div class="main">
+				<section class="showcase">
+					<form
+						id="image-form"
+						class="form"
+					>
+						<div class="title">Let's get creative!</div>
+						<div class="subtitle">Describe an image:</div>
+						<div class="input-container ic1">
+							<input
+								type="text"
+								id="prompt"
+								class="input"
+							/>
+							<div class="cut"></div>
+							<label
+								for="Image Description"
+								class="placeholder"
+								>Description</label
+							>
+						</div>
+						<div class="cut"></div>
+						<!-- size -->
+						<div class="input-container ic2">
+							<select
+								class="select"
+								name="size"
+								id="size"
+							>
+								<option value="small">Small</option>
+								<option
+									value="medium"
+									selected
+								>
+									Medium
+								</option>
+								<option value="large">Large</option>
+							</select>
+						</div>
+						<div class="cut"></div>
+						<button
+							type="submit"
+							class="submit"
+						>
+							Generate
+						</button>
+					</form>
+				</section>
+
+				<section class="image">
+					<div class="image-container">
+						<h2 class="msg"></h2>
+						<img
+							src=""
+							alt=""
+							id="image"
 						/>
 					</div>
-					<!-- size -->
-					<div class="form-control">
-						<select
-							name="size"
-							id="size"
-						>
-							<option value="small">Small</option>
-							<option
-								value="medium"
-								selected
-							>
-								Medium
-							</option>
-							<option value="large">Large</option>
-						</select>
-					</div>
-					<button
-						type="submit"
-						class="btn"
-					>
-						Generate
-					</button>
-				</form>
-			</section>
-
-			<section class="image">
-				<div class="image-container">
-					<h2 class="msg"></h2>
-					<img
-						src=""
-						alt=""
-						id="image"
-					/>
-				</div>
-			</section>
+				</section>
+			</div>
 		</main>
 
 		<div class="spinner"></div>
